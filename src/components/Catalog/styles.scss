@@ -1,0 +1,40 @@
+.containerCatalog {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  justify-content: center;
+}
+
+.headerCatalog {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.downSectionCatalog {
+  margin: 50px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+}
+
+@media (min-width: 1080px) {
+  .containerCatalog {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .containerCatalog {
+    height: fit-content;
+  }
+}
+
+@media (min-width: 2000px) {
+  .headerCatalog {
+    & > span {
+      font-size: 72px;
+    }
+  }
+}

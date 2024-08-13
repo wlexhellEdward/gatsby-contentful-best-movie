@@ -1,0 +1,19 @@
+@import "../../styles/variables.scss";
+
+.image-article {
+  border-radius: 32px;
+  border: 1px solid white;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  th {
+    background-color: $color-red;
+  }
+  td{
+    padding: 10px;
+    text-align: left;
+    background-color: darken($color-grey,40%);
+  }
+}

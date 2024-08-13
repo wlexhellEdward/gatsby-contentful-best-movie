@@ -1,0 +1,65 @@
+.cardMovie {
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s linear;
+  width: 220px;
+  flex-grow: 1;
+  align-items: center;
+  padding: 12px;
+  overflow: hidden;
+  img{
+    width: 220px;
+    height: 324px;
+  }
+  &:hover {
+    cursor: pointer;
+    border-radius: 12px;
+    background-color: darken(rgb(17, 24, 34), 1);
+  }
+}
+
+.descriptionCardMovie {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  gap: 10px;
+  & > span {
+    color: rgb(164, 170, 170);
+    max-width: 80%;
+  }
+  & > :nth-child(2) {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cardMovie {
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+  }
+  
+}
+
+@media (min-width: 2000px) {
+  .cardMovie {
+    & > img {
+      height: 324px;
+      width: 300px;
+    }
+  }
+  .descriptionCardMovie {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    & > :nth-child(2) {
+      font-size: 24px;
+    }
+    & > span {
+      font-size: 36px;
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+}

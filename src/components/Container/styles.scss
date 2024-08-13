@@ -1,0 +1,16 @@
+@import "../../styles/variables.scss";
+
+.main {
+  @include all-center;
+  padding: 100px;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+@media (max-width: 1024px) {
+  .main {
+    width: auto;
+    height: fit-content;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,23 @@
+.wrapperFamousPeopleCard {
+  display: flex;
+  justify-content: space-between;
+  & > span {
+    color: rgb(204, 7, 60);
+  }
+}
+
+.containerNames {
+  display: flex;
+  gap: 20px;
+}
+
+
+@media (max-width: 576px) {
+  .wrapperFamousPeopleCard{
+    flex-direction: column;
+  }
+  .containerNames {
+    flex-direction: column;
+    gap: 2px;
+  }
+}

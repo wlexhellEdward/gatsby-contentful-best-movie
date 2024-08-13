@@ -1,0 +1,40 @@
+.mainSection {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.upSectionAbout {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 576px) {
+  .mainSection {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1080px) {
+  .mainSection{
+    justify-content: center;
+  }
+  .upSectionInfo {
+    & > h1 {
+      display: flex;
+      text-align: center;
+    }
+  }
+}
+
+
+
+@media (min-width: 2000px) {
+  .mainSection {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,161 @@
+@import "../../styles/variables.scss";
+
+.posterBtnContainer {
+  display: flex;
+  flex-direction: column;
+  animation: animationSliderDataRight 0.75s ease-in-out forwards;
+}
+
+.pagination {
+  margin:10px 50px;
+  padding: 0px 0px 30px 0px;
+  @include all-center;
+}
+
+.paginationPoint {
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+  border-radius: 16px;
+  transition: 0.3s all ease-in-out;
+  background-color: $color-grey;
+}
+
+.paginationSelectedPoint {
+  transition: 0.3s all ease-in-out;
+  width: 12px;
+  cursor: pointer;
+  height: 12px;
+  border-radius: 16px;
+  background-color: lighten($color: $color-grey, $amount: 20);
+}
+
+.sliderData {
+  display: flex;
+  justify-content: center;
+  padding: 0px 50px;
+  align-items: center;
+  gap: 40px;
+  & > img,
+  .posterInfo {
+    animation: animationSliderData 0.75s ease-in-out forwards;
+  }
+  &>img{
+    width: 500px;
+    height: 600px;
+  }
+}
+
+@keyframes animationSliderData {
+  from {
+    transform: translateX(-130%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes animationSliderDataRight {
+  from {
+    transform: translateX(+130%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.sliderContainer {
+  width: 100%;
+  display: flex;
+  background: rgb(40, 80, 136);
+  background: radial-gradient(
+    circle,
+    rgba(40, 80, 136, 1) 0%,
+    rgba(17, 24, 34, 1) 100%
+  );
+  justify-content: center;
+  flex-direction: column;
+  transition: 0.3s all ease;
+  min-height: 100vh;
+  align-items: center;
+  padding: 100px 0px 0px 0px;
+}
+
+.OutterBtnSelectMovie {
+  display: flex;
+  align-items: center;
+  background-color: rgb(204, 7, 60);
+  border-radius: 8px;
+  padding: 12px 20px;
+  gap: 5px;
+  transition: 0.3s linear;
+  &:hover {
+    cursor: pointer;
+    background-color: darken($color: rgb(204, 7, 60), $amount: 10);
+  }
+}
+
+.arrowSelectMovie {
+  display: flex;
+  font-weight: 900;
+}
+
+.actionPoster {
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+@media (max-width: 320px) {
+  .sliderData {
+    & > img {
+      width: 100vw;
+      height: 50vh;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .posterBtnContainer {
+    @include all-center;
+  }
+}
+
+@media (max-width: 850px) {
+  .sliderData {
+    flex-direction: column;
+    gap: 0px;
+    padding: 0px 50px;
+    margin-bottom: 50px;
+    & > img {
+      width: 60vh;
+      height: 70vh;
+    }
+  }
+
+  .sliderContainer {
+    height: fit-content;
+    padding: 0px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .actionPoster {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 2000px) {
+  .sliderData {
+    & > img {
+      width: 800px;
+      height: 800px;
+    }
+  }
+  .actionPoster {
+    margin-top: 50px;
+  }
+}

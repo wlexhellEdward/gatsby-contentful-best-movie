@@ -1,0 +1,39 @@
+.containerMap {
+  width: 1000px;
+  height: 450px;
+}
+
+.popUp * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  &:nth-child(2) {
+    color: grey;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .mainSection {
+    height: fit-content;
+  }
+
+  .mainSection {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1000px) {
+  .containerMap {
+    
+    width: 80vw;
+    height: 60vh;
+  }
+}
+
+@media (min-width: 2000px) {
+  .mainSection {
+    justify-content: center;
+  }
+}

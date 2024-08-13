@@ -1,0 +1,47 @@
+$border-radius: 12px;
+$padding-container: 200px;
+$color-red: rgb(204, 7, 60);
+$color-grey: rgb(150, 157, 150);
+$color-bg: rgb(17, 24, 34);
+$margin-bottom: 50px;
+$gap: 20px;
+$gapLarge: 50px;
+$padding-up-down: 50px 0px;
+
+@mixin all-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+}
+
+@mixin column-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@mixin space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin space-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

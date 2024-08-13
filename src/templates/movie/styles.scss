@@ -1,0 +1,69 @@
+@import "../../styles/variables.scss";
+
+.movieInfo {
+  @include all-center;
+}
+
+.outterInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  & > h5 {
+    text-align: justify;
+    color: rgb(156, 150, 150);
+  }
+  & > h1 {
+    text-align: center;
+  }
+}
+
+.descptionLine {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.wrapperFamousPeople {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .imageMovie {
+    width: 100vw;
+    height: 80vh;
+  }
+}
+
+@media (max-width: 800px) {
+  .descptionLine {
+    display: flex;
+    align-items: normal;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hr {
+    display: none;
+  }
+  .movieInfo {
+    flex-direction: column;
+  }
+  .title {
+    display: flex;
+    text-align: center;
+  }
+  .outterInfo {
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+  }
+  .wrapperFamousPeople {
+    width: 100%;
+    gap: 20px;
+  }
+}

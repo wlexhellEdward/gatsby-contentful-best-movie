@@ -1,0 +1,123 @@
+@import "../../styles/variables.scss";
+
+.marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 240px;
+  height: 120px;
+  & > h2 {
+    margin-bottom: 20px;
+  }
+}
+
+.balloon {
+  background-color: white;
+  box-shadow: 0px 0px 1px 1px black inset;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s all linear;
+  & > * {
+    transition: 0.5s all linear;
+  }
+}
+
+.description {
+  max-width: 200px;
+  & > span {
+    color: $color-grey;
+  }
+}
+
+.outterTitleImage {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  & > img {
+    width: 32px;
+    height: 32px;
+    padding:0px;
+    margin: 0px;
+  }
+}
+
+.actions {
+  margin: 10px 0px;
+  display: flex;
+  gap: 10px;
+  & > a {
+    cursor: pointer;
+    background-color: $color-red;
+    color: white;
+
+    border: none;
+    padding: 8px;
+    @include all-center;
+    transition: 0.3s linear;
+    &:hover {
+      background-color: darken($color-red, 10);
+    }
+  }
+}
+
+.customMarker {
+  padding: 12px;
+  height: 40px;
+  width: 150px;
+  text-align: justify;
+  background-color: white;
+  border-radius: 32px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: black;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.customHoverText {
+  font-size: 10px;
+  color: black;
+  display: flex;
+  width: 140px;
+  margin: 10px;
+  justify-content: center;
+  background-color: white;
+  border-radius: 8px;
+  opacity: 0;
+  transition: all 0.3s ease-in;
+}
+
+.customMarkerIcon {
+  width: 32px;
+  height: 32px;
+  padding:0px;
+  margin: 0px;
+}
+
+.ulMarker {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.outterImgUl {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.outterImg {
+  display: flex;
+  align-items: center;
+  & > img {
+    width: 64px;
+    height: 64px;
+  }
+}

@@ -1,0 +1,38 @@
+@import '../../styles/variables.scss';
+
+.title {
+  margin-bottom: 50px;
+}
+
+.wrapper{
+  display: flex;
+  @include column-view;
+}
+
+@media (max-width: 576px) {
+  .mainSection {
+    width: auto;
+  }
+  .container{
+    width: fit-content;
+  }
+  .title{
+    display: flex;
+    text-align: center;
+  }
+}
+
+@media (min-width: 2000px) {
+  .mainSection {
+    width: auto;
+  }
+  .container{
+    width: fit-content;
+    gap: 150px;
+  }
+  .title{
+    display: flex;
+    text-align: center;
+  }
+}
+

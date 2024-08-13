@@ -1,0 +1,7 @@
+.footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: darken($color: rgb(7,24,34), $amount: 5) ;
+    padding: 50px;
+    color: white;
+}
